@@ -1,0 +1,77 @@
+require 'sinatra'
+require 'json'
+
+# Sample trainer and item data
+TRAINERS = [
+  { name: "Youngster Joey", lat: 40.0, lng: -74.0, pokemon: ["Rattata"] },
+  { name: "Bug Catcher Wade", lat: 40.1, lng: -73.9, pokemon: ["Caterpie", "Weedle"] }
+]
+
+ITEMS = [
+  { name: "Potion", lat: 40.05, lng: -74.05, location: "Route 29" },
+  { name: "Rare Candy", lat: 40.1, lng: -74.1, location: "Dark Cave" }
+]
+
+get '/' do
+  erb :index
+end
+
+get '/trainers' do
+  content_type :json
+  TRAINERS.to_json
+end
+
+get '/items' do
+  content_type :json
+  ITEMS.to_json
+end
+
+__END__
+
+@@ layout
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HGSS Ironmon Map</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        #map { height: 500px; width: 100%; margin-top: 20px; }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <h1>HGSS Ironmon Interactive Map</h1>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var map = L.map('map').setView([40.0, -74.0], 5);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+
+            fetch('/trainers')
+                .then(response => response.json())
+                .then(data => {
+                    data.forEach(trainer => {
+                        L.marker([trainer.lat, trainer.lng])
+                            .addTo(map)
+                            .bindPopup(`<b>${trainer.name}</b><br>Pokemon: ${trainer.pokemon.join(", ")}`);
+                    });
+                });
+
+            fetch('/items')
+                .then(response => response.json())
+                .then(data => {
+                    data.forEach(item => {
+                        L.circleMarker([item.lat, item.lng], { color: 'red' })
+                            .addTo(map)
+                            .bindPopup(`<b>${item.name}</b><br>Location: ${item.location}`);
+                    });
+                });
+        });
+    </script>
+</body>
+</html>
