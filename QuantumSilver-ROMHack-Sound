@@ -1,0 +1,27 @@
+YourProjectFolder/
+└── Audio/
+    └── BGM/
+        ├── johto_overworld_music.ogg
+        ├── wild_battle_music.ogg
+        ├── trainer_battle_music.ogg
+        ├── victory_music.ogg
+        └── gym_battle_music.ogg
+# Play Johto Overworld Music
+def on_map_load
+  Audio.bgm_play("Audio/BGM/johto_overworld_music", 100, 100)  # Make sure to use the exact file name
+end
+
+# Play Wild Battle Music
+def on_wild_battle_start
+  Audio.bgm_play("Audio/BGM/wild_battle_music", 100, 100)  # Adjust with your file
+end
+
+# Play Battle Music when fighting trainers or gym leaders
+def on_trainer_battle_start
+  Audio.bgm_play("Audio/BGM/trainer_battle_music", 100, 100)  # Adjust with your file
+end
+
+# Play Victory Music after winning a battle
+def on_battle_victory
+  Audio.bgm_play("Audio/BGM/victory_music", 100, 100)  # Adjust with your file
+end
