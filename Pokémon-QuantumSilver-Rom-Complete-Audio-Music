@@ -1,0 +1,302 @@
+# Audio manager for handling all background music (BGM) and sound effects (SE)
+
+# Johto Overworld Music
+def on_map_load
+  Audio.bgm_play("Audio/BGM/johto_overworld_music", 100, 100)  # Johto Overworld music
+end
+
+# Wild Battle Music
+def on_wild_battle_start
+  Audio.bgm_play("Audio/BGM/wild_battle_music", 100, 100)  # Wild Battle music
+end
+
+# Trainer Battle Music
+def on_trainer_battle_start
+  Audio.bgm_play("Audio/BGM/trainer_battle_music", 100, 100)  # Trainer Battle music
+end
+
+# Gym Leader Battle Music
+def on_gym_leader_battle_start
+  Audio.bgm_play("Audio/BGM/gym_leader_battle_music", 100, 100)
+end
+
+# Victory Music after winning a battle
+def on_battle_victory
+  Audio.bgm_play("Audio/BGM/victory_music", 100, 100)  # Victory music
+end
+
+# Pokémon Center Music
+def on_enter_pokemon_center
+  Audio.bgm_play("Audio/BGM/pokemon_center_music", 100, 100)
+end
+
+# PokéMart Music
+def on_enter_pokemart
+  Audio.bgm_play("Audio/BGM/pokemart_music", 100, 100)
+end
+
+# Level Up Sound
+def on_level_up
+  Audio.se_play("Audio/SE/level_up", 100, 100)
+end
+
+# Trainer Encounter Music
+def on_trainer_encounter
+  Audio.bgm_play("Audio/BGM/trainer_encounter_music", 100, 100)
+end
+
+# Champion Battle Music
+def on_champion_battle
+  Audio.bgm_play("Audio/BGM/champion_battle_music", 100, 100)
+end
+
+# Hall of Fame Music
+def on_hall_of_fame
+  Audio.bgm_play("Audio/BGM/hall_of_fame_music", 100, 100)
+end
+
+# Legendary Pokémon Encounter Music
+def on_legendary_encounter
+  Audio.bgm_play("Audio/BGM/legendary_encounter_music", 100, 100)
+end
+
+# Additional Sound Effects:
+
+# Wild Pokémon Encounter Sound
+def on_wild_pokemon_encounter
+  Audio.se_play("Audio/SE/wild_pokemon_encounter", 100, 100)
+end
+
+# Running Shoes Sound
+def on_running_shoes
+  Audio.se_play("Audio/SE/running_shoes", 100, 100)
+end
+
+# Poké Ball Throw Sound
+def on_pokeball_throw
+  Audio.se_play("Audio/SE/pokeball_throw", 100, 100)
+end
+
+# Critical Hit Sound
+def on_critical_hit
+  Audio.se_play("Audio/SE/critical_hit", 100, 100)
+end
+
+# Pokémon Fainting Sound
+def on_pokemon_faint
+  Audio.se_play("Audio/SE/pokemon_faint", 100, 100)
+end
+
+# Item Pickup Sound
+def on_item_pickup
+  Audio.se_play("Audio/SE/item_pickup", 100, 100)
+end
+
+# Egg Hatching Sound
+def on_egg_hatch
+  Audio.se_play("Audio/SE/egg_hatch", 100, 100)
+end
+
+# Pokégear Access Sound
+def on_pokegear_access
+  Audio.se_play("Audio/SE/pokegear_access", 100, 100)
+end
+
+# Trainer Speech Sound (for Gym Leaders, Rivals, etc.)
+def on_trainer_speech
+  Audio.se_play("Audio/SE/trainer_speech", 100, 100)
+end
+
+# Evolution Sound
+def on_evolution
+  Audio.se_play("Audio/SE/evolution", 100, 100)
+end
+
+# Badge Earned Sound
+def on_badge_earned
+  Audio.se_play("Audio/SE/badge_earned", 100, 100)
+end
+
+# Pokémon Center Heal Sound
+def on_pokemon_center_heal
+  Audio.se_play("Audio/SE/pokemon_center_heal", 100, 100)
+end
+
+# Bicycle Sound
+def on_bicycle_use
+  Audio.se_play("Audio/SE/bicycle", 100, 100)
+end
+
+# Surfing Sound
+def on_surfing
+  Audio.se_play("Audio/SE/surfing", 100, 100)
+end
+
+# Gym Leader Defeat Sound
+def on_gym_leader_defeat
+  Audio.se_play("Audio/SE/gym_leader_defeat", 100, 100)
+end
+
+# Pokéathlon Sound
+def on_pokeathlon
+  Audio.se_play("Audio/SE/pokeathlon", 100, 100)
+end
+
+# Pokémon Cry
+def on_pokemon_cry
+  Audio.se_play("Audio/SE/pokemon_cry", 100, 100)
+end
+
+# Game Over Sound
+def on_game_over
+  Audio.se_play("Audio/SE/game_over", 100, 100)
+end
+
+# Trainer Defeat Sound
+def on_trainer_defeat
+  Audio.se_play("Audio/SE/trainer_defeat", 100, 100)
+end
+
+# Rival Battle Music
+def on_rival_battle_start
+  Audio.bgm_play("Audio/BGM/rival_battle_music", 100, 100)
+end
+
+# Legendary Battle Music
+def on_legendary_battle_start
+  Audio.bgm_play("Audio/BGM/legendary_battle_music", 100, 100)
+end
+
+# Level Up Sound
+def on_pokemon_level_up
+  Audio.se_play("Audio/SE/pokemon_level_up", 100, 100)
+end
+
+# Badge Earned Sound
+def on_badge_earned
+  Audio.se_play("Audio/SE/badge_earned", 100, 100)
+end
+
+# Pokédex Completion Sound
+def on_pokedex_complete
+  Audio.se_play("Audio/SE/pokedex_complete", 100, 100)
+end
+
+# Poké Ball Click Sound
+def on_pokeball_click
+  Audio.se_play("Audio/SE/pokeball_click", 100, 100)
+end
+
+# Pokémon Fainting Sound (Opponent's Pokémon)
+def on_opponent_pokemon_faint
+  Audio.se_play("Audio/SE/opponent_pokemon_faint", 100, 100)
+end
+
+def on_fishing
+  Audio.se_play("Audio/SE/fishing", 100, 100)
+end
+
+def on_badge_display
+  Audio.se_play("Audio/SE/badge_display", 100, 100)
+end
+
+def on_battle_start
+  Audio.se_play("Audio/SE/battle_start", 100, 100)
+end
+
+def on_special_area_run
+  Audio.bgm_play("Audio/BGM/special_area_run", 100, 100)
+end
+
+def on_trainer_call
+  Audio.se_play("Audio/SE/trainer_call", 100, 100)
+end
+
+def on_pokeathlon_event
+  Audio.bgm_play("Audio/BGM/pokeathlon_event", 100, 100)
+end
+
+def on_new_pokemon_received
+  Audio.se_play("Audio/SE/new_pokemon_received", 100, 100)
+end
+
+def on_legendary_pokemon_captured
+  Audio.se_play("Audio/SE/legendary_pokemon_captured", 100, 100)
+end
+
+def on_evolution_cancelled
+  Audio.se_play("Audio/SE/evolution_cancelled", 100, 100)
+end
+
+def on_item_use_outside_battle
+  Audio.se_play("Audio/SE/item_use_outside_battle", 100, 100)
+end
+
+def on_day_night_transition
+  if Time.now.hour < 18  # Daytime (example)
+    Audio.bgm_play("Audio/BGM/day_music", 100, 100)
+  else
+    Audio.bgm_play("Audio/BGM/night_music", 100, 100)
+  end
+end
+
+def on_special_legendary_event
+  Audio.se_play("Audio/SE/legendary_event", 100, 100)
+end
+
+def on_double_battle_start
+  Audio.bgm_play("Audio/BGM/double_battle_music", 100, 100)
+end
+
+def on_battle_frontier_challenge
+  Audio.bgm_play("Audio/BGM/frontier_battle_music", 100, 100)
+end
+
+def on_celebi_event
+  Audio.bgm_play("Audio/BGM/celebi_event_music", 100, 100)
+end
+
+def on_mewtwo_battle_start
+  Audio.bgm_play("Audio/BGM/mewtwo_battle_music", 100, 100)
+end
+
+def on_gym_leader_rematch
+  Audio.bgm_play("Audio/BGM/gym_leader_rematch_music", 100, 100)
+end
+
+def on_legendary_pokemon_rematch
+  Audio.bgm_play("Audio/BGM/legendary_rematch_music", 100, 100)
+end
+
+def on_red_battle_start
+  Audio.bgm_play("Audio/BGM/red_battle_music", 100, 100)
+end
+
+def on_frontier_battle
+  Audio.bgm_play("Audio/BGM/frontier_battle_music", 100, 100)
+end
+
+def on_suicune_event
+  Audio.bgm_play("Audio/BGM/suicune_event_music", 100, 100)
+end
+
+def on_legendary_dog_battle
+  Audio.bgm_play("Audio/BGM/legendary_dog_battle_music", 100, 100)
+end
+
+def on_shiny_pokemon_encounter
+  Audio.se_play("Audio/SE/shiny_pokemon_encounter", 100, 100)
+end
+
+# Additional Postgame Music and Sounds:
+def on_postgame_battle_start
+  Audio.bgm_play("Audio/BGM/postgame_battle_music", 100, 100)
+end
+
+def on_shiny_pokemon_capture
+  Audio.se_play("Audio/SE/shiny_pokemon_capture", 100, 100)
+end
+
+def on_event_notification
+  Audio.se_play("Audio/SE/event_notification", 100, 100)
+end
